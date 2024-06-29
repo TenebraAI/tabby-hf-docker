@@ -34,7 +34,7 @@ model:
 
   # An initial model to load. Make sure the model is located in the model directory!
   # A model can be loaded later via the API.
-  model_name: SicariusSicariiStuff/LLAMA-3_8B_Unaligned_Alpha_EXL2_6.0bpw
+  model_name: SicariusSicariiStuff_LLAMA-3_8B_Unaligned_Alpha_EXL2_6.0bpw
 
   # Sends dummy model names when the models endpoint is queried
   # Enable this if the program is looking for a specific OAI model

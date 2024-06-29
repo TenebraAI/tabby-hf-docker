@@ -77,7 +77,9 @@ EXPOSE 80
 # Install Huggingface tools
 RUN pip install --no-cache-dir hf_transfer huggingface-hub[cli]
 
-ADD tabby.yaml /app/config/tabby.yaml
+ADD tabby.yaml config/tabby.yaml
+ADD entrypoint.sh entrypoint.sh
+ADD model_downloader.py model_downloader.py
 
 # Run when the container launches
-ENTRYPOINT ["python", "main.py", "--host", "0.0.0.0", "--port", "80", "--config", "/app/config/tabby.yaml"]
+ENTRYPOINT ["./entrypoint.sh"]
