@@ -80,5 +80,4 @@ RUN pip install --no-cache-dir hf_transfer huggingface-hub[cli]
 ADD tabby.yaml /app/config/tabby.yaml
 
 # Run when the container launches
-ENTRYPOINT ["python", "main.py"]
-CMD ["--host", "0.0.0.0", "--port", "80", "--config", "/app/config/tabby.yaml"]
+ENTRYPOINT ["python", "main.py", "--host", "0.0.0.0", "--port", "80", "--config", "/app/config/tabby.yaml"]
